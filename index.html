@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidelidade - Igreja que está em Serra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a0e17;
+            --accent-gold: #d4af37;
+            --gold-light: #f1d592;
+            --text-main: #e0e0e0;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --gradient: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #05070a;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .folder-card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--gradient);
+            color: var(--text-main);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-design {
+            height: 260px;
+            background: url('https://images.unsplash.com/photo-1519834785169-98be25ec3f84?auto=format&fit=crop&q=80&w=1000') center/cover;
+            position: relative;
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+
+        .top-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--primary-bg), transparent);
+        }
+
+        .content {
+            padding: 0 25px 40px 25px;
+            margin-top: -30px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .church-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin: 0 0 15px 0;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .verse {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            color: var(--gold-light);
+            opacity: 0.9;
+        }
+
+        .cta-box {
+            background: var(--glass-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 24px;
+            padding: 25px 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
+        }
+
+        .bank-details {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .bank-details div {
+            margin-bottom: 4px;
+        }
+
+        .bank-details strong {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .qr-wrapper {
+            background: #fff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .qr-wrapper img {
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+
+        .btn-copy {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: #000;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-copy:active {
+            transform: scale(0.97);
+        }
+
+        .copy-success {
+            font-size: 0.75rem;
+            color: #4ade80;
+            margin-top: 8px;
+            display: none;
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding: 25px;
+            font-size: 0.65rem;
+            opacity: 0.4;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .shimmer {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 50%;
+            height: 300%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(30deg);
+            animation: shimmer 8s infinite;
+        }
+
+        @keyframes shimmer { 100% { left: 200%; top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div class="folder-card">
+        <div class="shimmer"></div>
+        <div class="top-design">
+            <div class="top-overlay"></div>
+        </div>
+
+        <div class="content">
+            <span class="church-name">Igreja que está em Serra</span>
+            <h1>Fidelidade e Gratidão</h1>
+            
+            <p class="verse">
+                "Honre ao Senhor com todos os seus recursos e com as primícias de toda a sua renda." <br>
+                <small>— Provérbios 3:9</small>
+            </p>
+
+            <div class="cta-box">
+                <div class="bank-details">
+                    <div><strong>Banco:</strong> Banestes (021)</div>
+                    <div><strong>Agência:</strong> 90</div>
+                    <div><strong>Conta Jurídica:</strong> 4.073.128-3</div>
+                    <div><strong>CNPJ/Chave Pix:</strong> 15.862.293/0001-93</div>
+                </div>
+
+                <div class="qr-wrapper">
+                    <!-- QR Code gerado com a chave CNPJ -->
+                    <img src="qrcode pix igreja.PNG" alt="Pix QR Code">
+                </div>
+
+                <button class="btn-copy" onclick="copyPixCode()">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                    PIX COPIA E COLA (CNPJ)
+                </button>
+                <div id="status" class="copy-success">✓ Chave copiada com sucesso!</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            IGREJA QUE ESTÁ EM SERRA • 2026
+        </div>
+    </div>
+
+    <script>
+        function copyPixCode() {
+            // Chave CNPJ conforme solicitado
+            const pixKey = "15.862.293/0001-93";
+            
+            const el = document.createElement('textarea');
+            el.value = pixKey;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const status = document.getElementById('status');
+            status.style.display = 'block';
+            
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
